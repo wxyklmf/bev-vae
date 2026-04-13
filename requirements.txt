@@ -30,7 +30,6 @@ pycolmap
 accelerate
 open3d
 PyQt5
-mayavi
 geopandas
 rasterio
 aioboto3
