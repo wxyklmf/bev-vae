@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from timm.models.swin_transformer import BasicLayer
+from bev_vae.models.encoders.swin_layers import BasicLayer
 from timm.models.vision_transformer import PatchEmbed
 
 # ============================================================

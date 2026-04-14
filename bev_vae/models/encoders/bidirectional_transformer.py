@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from timm.models.swin_transformer import BasicLayer
+from bev_vae.models.encoders.swin_layers import BasicLayer
 
 # ============================================================
 # 原始代码来自 UltraLiDAR/plugin/models/necks/vq_layer.py
