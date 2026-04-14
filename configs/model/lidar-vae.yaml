@@ -1,0 +1,28 @@
+model:
+  _target_: bev_vae.models.lidar_vae.LiDARVAE
+  
+  # Voxelizer 参数
+  x_min: -50.0
+  x_max: 50.0
+  y_min: -50.0
+  y_max: 50.0
+  z_min: -3.0
+  z_max: 5.0
+  voxel_step: 0.15625     # 水平体素大小（米）
+  z_step: 0.2             # 垂直体素大小（米）
+  
+  # Encoder/Decoder 参数
+  img_size: 640            # BEV 平面尺寸（y/x 方向）
+  patch_size: 8           # 每个 patch 的大小
+  embed_dim: 512          # Transformer 隐藏维度
+  num_heads: 16            # 注意力头数
+  encoder_depth: 12       # Encoder Transformer 层数
+  decoder_depth: 12        # Decoder Transformer 层数
+  
+  # VQ 码本参数
+  codebook_dim: 1024      # 码字维度
+  n_e: 1024               # 码本大小（多少个码字）
+  beta: 1.0               # commitment loss 权重
+  
+  # 训练参数
+  learning_rate: 1.0e-4
